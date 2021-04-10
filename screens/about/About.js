@@ -16,13 +16,13 @@ const About = props =>{
         horizontal={true}
         showsHorizontalScrollIndicator={false}
     >
-        <CardsSlider imageUri={require('../../assets/images/about.jpg')}
+        <CardsSlider imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Home"
         />
-        <CardsSlider imageUri={require('../../assets/images/about.jpg')}
+        <CardsSlider imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Experiences"
         />
-        <CardsSlider imageUri={require('../../assets/images/about.jpg')}
+        <CardsSlider imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Resturant"
         />
     </ScrollView>

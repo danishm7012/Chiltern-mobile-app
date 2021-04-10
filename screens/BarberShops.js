@@ -1,5 +1,4 @@
 import React from 'react';
-import ServicesData  from '../data/ServicesData'
 import ServicesGrid from '../components/barberShopScreens/ServicesGrid'
 import {View,FlatList, Text, Share } from 'react-native'
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'

@@ -6,23 +6,23 @@ let {height, width} = Dimensions.get("window")
 
 const exampleItems = [
   {
-    title: require('../assets/images/slide1.jpg'),
+    title: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
    
   },
   {
-    title: require('../assets/images/slide2.jpg'),
+    title: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
     
   },
   {
-    title: require('../assets/images/slide3.jpg'),
+    title: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
 
   },
   {
-    title: require('../assets/images/about.jpg'),
+    title: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
 
   },
   {
-    title: require('../assets/images/blog1.jpg'),
+    title: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
 
   },
 ];

@@ -14,10 +14,10 @@ import CardSilder from 'react-native-cards-slider';
       Images
     </Text>
     <CardSilder style={{marginTop: 30}}>
-      <Image style={{height: 170,width:150}} source={require('../../assets/images/about.jpg')} />
-      <Image style={{height: 170}} source={require('../../assets/images/about.jpg')} />
-      <Image style={{height: 170}} source={require('../../assets/images/about.jpg')} />
-      <Image style={{height: 170}} source={require('../../assets/images/about.jpg')} />
+      <Image style={{height: 170,width:150}} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')} />
+      <Image style={{height: 170}} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')} />
+      <Image style={{height: 170}} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')} />
+      <Image style={{height: 170}} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')} />
     </CardSilder>
     <Text style={{fontSize: 30, color: '#000', marginTop:40, marginLeft:20, fontWeight:'bold'}}>
       Block with Text

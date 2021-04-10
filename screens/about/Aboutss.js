@@ -11,13 +11,13 @@ const Aboutss = props =>{
         horizontal={true}
         showsHorizontalScrollIndicator={false}
     >
-        <Category imageUri={require('../../assets/images/about.jpg')}
+        <Category imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Home"
         />
-        <Category imageUri={require('../../assets/images/about.jpg')}
+        <Category imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Experiences"
         />
-        <Category imageUri={require('../../assets/images/about.jpg')}
+        <Category imageUri={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}
             name="Resturant"
         />
     </ScrollView>

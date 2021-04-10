@@ -54,9 +54,14 @@ if (Platform.OS==="android" && Platform.Version >= 21){
         />
     </ScrollView> */}
 </View>
-<View style={{top:0}} >
+<View style={{flexDirection:'row'}} >
     
     <SearchBars/>
+    <Button
+  
+  type="outline"
+  containerStyle={{flex:1}}
+/>
       </View>
 <View style={{marginTop:1 }}>
 <Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444' }}>Services</Text>

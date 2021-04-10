@@ -12,15 +12,15 @@ export default class SwiperComponent extends Component {
       showsPagination={false}
       showsButtons={false}>
         <View style={AllStyle.slide1}>
-          <Image style={AllStyle.imagess} source={require('../../assets/images/blog1.jpg')}/>
+          <Image style={AllStyle.imagess} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}/>
         </View>
         <View style={AllStyle.slide2}>
-        <Image style={AllStyle.imagess} source={require('../../assets/images/about.jpg')}/>
+        <Image style={AllStyle.imagess} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}/>
 
           
         </View>
         <View style={AllStyle.slide3}>
-        <Image style={AllStyle.imagess} source={require('../../assets/images/slide1.jpg')}/>
+        <Image style={AllStyle.imagess} source={require('../../assets/images/excursions/admission-to-kidzania-600x433.jpg')}/>
 
         </View>
       </Swiper>

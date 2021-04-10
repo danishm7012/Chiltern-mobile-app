@@ -20,11 +20,12 @@ export default class SearchBars extends React.Component {
         placeholder="Search..."
         onChangeText={this.updateSearch}
         value={search}
-        containerStyle={{backgroundColor:'#fff', width:width/1.2 }}
-        inputContainerStyle={{backgroundColor:'#fff',borderWidth:1}}
+        containerStyle={{backgroundColor:'#fff', borderWidth:0, width:width/1.2 }}
+        inputContainerStyle={{backgroundColor:'#fff'}}
         lightTheme={true}
         round={true}
         searchIcon={false}
+        underlineColorAndroid={'transparent'}
       />
     );
   }

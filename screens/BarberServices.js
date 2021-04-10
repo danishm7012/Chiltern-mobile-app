@@ -1,7 +1,5 @@
 import React from 'react';
 import {View ,FlatList} from 'react-native';
-import ServicesData from '../data/ServicesData';
-import NationalCompanies from '../data/companiesData/national'
 import BarberServicesGrid from '../components/barberShopScreens/BarberServicesGrid';
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../components/headerButton/HeaderButton'
