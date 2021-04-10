@@ -5,6 +5,8 @@ import BarberBookAppointment from '../../screens/BarberBookAppointment'
 import Color from '../../colors/Color'
 import { createAppContainer } from "react-navigation";
 import {Platform } from "react-native"
+import ContactUs from '../../screens/contactUs/ContactUs'
+
 
 const BarberStackNavigation = createStackNavigator({
   
@@ -17,7 +19,7 @@ Barber_Services:
     screen: BarberServices,
 },
 BarberBook_Appointment:{
-    screen :BarberBookAppointment,
+    screen :ContactUs,
   },
 
 },

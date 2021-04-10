@@ -50,13 +50,14 @@ const CustomCarousel = () => {
   ), []);
 
   return (
-    <SafeAreaView style={{ flex: 1, backgroundColor: '#ffffff', paddingTop: 20, paddingBottom:20 }}>
-      <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'center' }}>
+    <SafeAreaView style={{ flex: 0.6, backgroundColor: '#ffffff' }}>
+      <View style={{ flex: 0.6, height:height/4, flexDirection: 'row', justifyContent: 'center' }}>
         <Carousel
           layout={'default'}
           ref={ref}
           data={carouselItems}
           sliderWidth={width/1.4}
+          
           itemWidth={width/1.4}
           autoplay={true}
           

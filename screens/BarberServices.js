@@ -19,7 +19,12 @@ const BarberServices = props =>{
   
    // const renderCompanyItem = itemData =>{
       return(
-        <BarberServicesGrid/>
+        <BarberServicesGrid
+        onSelect={()=>{
+                         props.navigation.navigate({routeName: 'BarberBook_Appointment',})
+        }}
+        
+                         />
 //         <View style={{flex:1 }}>
           
          

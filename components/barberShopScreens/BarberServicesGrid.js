@@ -3,11 +3,13 @@ import { View,Text,Dimensions,SafeAreaView,StatusBar, TouchableOpacity,ScrollVie
 import AllStyle from '../../AllStyle'
 import {PricingCard,SocialIcon, Button,Avatar,Icon,Tile} from 'react-native-elements'
 import SwiperComponent from './SwiperCard'
+import SearchBars from '../../components/searchComponent/SearchBar'
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
-function BarberServicesGrid(props) {
+function BarberServicesGrid({onSelect}) {
     return (
 <View style={{flex:1}}>
+  
     <View style={AllStyle.aboutSwiper}>
     <SwiperComponent/>
     </View>
@@ -26,7 +28,8 @@ function BarberServicesGrid(props) {
     </View>
     <View >
     <Button
-  title="Inquiry Now"
+      onPress={onSelect}
+      title="Inquiry Now"
   raised={true}
   type="outline"
 />

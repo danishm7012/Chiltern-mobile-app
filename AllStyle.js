@@ -92,4 +92,55 @@ slide1: {
     
     },
 
+    //************************************Contact Us Page Start  ******************************/
+
+mainContactForm:{
+    flex:1,
+    padding:30,
+  
+  },
+  contactUsImagesView:{
+    flex:1,
+    width:screenWidth,
+    height:screenHeight/3,
+  },
+  contactUsImages:{
+    flex:1,
+    width:screenWidth, 
+    resizeMode:'stretch'
+  },
+  contactUsformMainHeading:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  contactUsformMainHeadingOuter:{
+    fontSize:26,
+    fontFamily:'open-sans-bold',
+    color:'#10d300',
+    letterSpacing:2,
+    textTransform: 'uppercase',
+  
+  },
+  contactUsformMainHeadingInner:{
+    fontSize:26,
+    fontFamily:'open-sans-bold',
+    color:'#0f385a',
+    letterSpacing:2,
+    textTransform: 'uppercase',
+  
+  },
+  TextinputfieldcontactUs:{
+    paddingTop:10,
+    borderBottomColor: '#0f385a',
+    borderBottomWidth:2,
+    color:'#0f385a',
+    borderRadius:40,
+    fontSize:16,
+    fontFamily:'open-sans',
+    letterSpacing:2,
+    
+  },
+  
+
 });

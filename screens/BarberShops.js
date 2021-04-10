@@ -10,12 +10,14 @@ import HeaderButton from '../components/headerButton/HeaderButton'
 const BarberShops = (props) =>{
 
   // const renderItem = (itemData) =>{ 
-    return( 
+    return(
+       
       <ServicesGrid
       onSelect={()=>{
      props.navigation.navigate({routeName: 'Barber_Services'})
       }} 
      />
+     
       //  <ServicesGrid  
       // title={itemData.item.title}
       // servicesImages = {itemData.item.image}
