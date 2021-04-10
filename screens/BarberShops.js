@@ -3,24 +3,34 @@ import ServicesGrid from '../components/barberShopScreens/ServicesGrid'
 import {View,FlatList, Text, Share } from 'react-native'
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../components/headerButton/HeaderButton'
-
+import SERVICES from '../data/Services'
 
 
 const BarberShops = (props) =>{
 
-  // const renderItem = (itemData) =>{ 
+  //  const renderItem = (itemData) =>{ 
     return(
        
       <ServicesGrid
-      onSelect={()=>{
-     props.navigation.navigate({routeName: 'Barber_Services'})
-      }} 
-     />
+    // title= {itemData.item.name}
+    // logo = {itemData.item.logo}
+    // image={itemData.item.image}
+    //   onSelect={()=>{
+    //  props.navigation.navigate({routeName: 'Barber_Services'})
+    // //  params:{
+    //         serviceId : itemData.item._id,
+    //         serviceTitle : itemData.item.name
+    //       }
+    
+      // }}
+      onSelectFilter={()=>{
+        props.navigation.navigate({routeName: 'Filter_Screen'})
+         }} 
      
-      //  <ServicesGrid  
-      // title={itemData.item.title}
-      // servicesImages = {itemData.item.image}
-      // serviceLogo = {itemData.item.logo}
+     
+      // <ServicesGrid  
+      //  title = {itemData.item.name}
+
       //    onSelect={()=>{
       //    props.navigation.navigate({routeName: 'Barber_Services',
       //    params:{
@@ -29,20 +39,20 @@ const BarberShops = (props) =>{
       //    }
       // });
       // }}
-      // />
+      />
       );
     };  
-  // );
-  // }
+  
+  
   // return (
     
   // <View style={{width:'100%'}}>    
  
   // <FlatList
-  //       data={ServicesData}
-  //       keyExtractor={item => item.id}
+  //       data={SERVICES}
+  //       keyExtractor={item => item._id}
   //       renderItem={renderItem}
-  //       numColumns={1}
+  //       numColumns={2}
   //     />
   {/* <FlatList 
   keyExtractor={(item)=> item.id}
@@ -50,7 +60,8 @@ const BarberShops = (props) =>{
   renderItem={renderGridItem} 
   /> */}
   {/* </View> */}
-
+// )
+// }
 
 BarberShops.navigationOptions = navData => {
   return{    

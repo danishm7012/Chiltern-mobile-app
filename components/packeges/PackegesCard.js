@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card,  Button, Icon } from 'react-native-elements'
-import { FlatList, SafeAreaView,ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { FlatList, SafeAreaView,ScrollView, ImageBackground, Text, TouchableOpacity, View } from "react-native";
 import {Dimensions} from 'react-native'
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
@@ -63,9 +63,9 @@ const Cards = ({ imgs,name,detail }) => {
  >
      
         <View style={{flex:1,marginLeft:20,height:screenHeight/5}}>
-    <View style={{ height:screenHeight/5, backgroundColor:'#9980FA', width:screenHeight/2.9}}>
-        <Text style={{ fontFamily: 'open-sans-bold'}}>{name}</Text>
-        </View>
+        <ImageBackground source={imgs} style={{height:screenHeight/5,width:screenHeight/2.9}}>
+        {/* <Text style={{ fontFamily: 'open-sans-bold'}}>{name}</Text> */}
+        </ImageBackground>
     {/* <Card.Image style={{height:screenHeight/5, width:screenHeight/2.9, resizeMode:'stretch'}} source={imgs}>
   
     </Card.Image> */}
@@ -99,13 +99,25 @@ const PackegesCard = (props) => {
     >
       <Cards
     
-    imgs={ require('../../assets/ContactUS.jpg')  }
+    imgs={ require('../../assets/ChiltrenPackages/chiltern.jpg')  }
     name = {'Packeges'}
     detail = {'Packeges Detail'}
     />
     <Cards
     
-    imgs={ require('../../assets/ContactUS.jpg')  }
+    imgs={ require('../../assets/ChiltrenPackages/chiltern2.jpg')  }
+    name = {'Packeges'}
+    detail = {'Packeges Detail'}
+    />
+    <Cards
+    
+    imgs={ require('../../assets/ChiltrenPackages/chiltern3.jpg')  }
+    name = {'Packeges'}
+    detail = {'Packeges Detail'}
+    />
+    <Cards
+    
+    imgs={ require('../../assets/ChiltrenPackages/chiltern4.jpg')  }
     name = {'Packeges'}
     detail = {'Packeges Detail'}
     />

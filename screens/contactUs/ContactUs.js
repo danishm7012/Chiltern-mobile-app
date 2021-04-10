@@ -25,26 +25,29 @@ const ContactUs = props =>{
 
   const [errors, setErrors] = useState({})
 
-  const submitHandler = (event) => {
-    event.preventDefault()
+  const submitHandler =  async(event) => {
+    try{event.preventDefault()
 
     let contactData = { fname, lname, email, message }
-    const config = {
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }
-
-    axios
-      .post('/api/contact/add', contactData, config)
-      .then((res) => {
-        setErrors({})
-        alert(res.data.success)
+    
+    
+      const responseData= await fetch('http://chiltern.herokuapp.com/api/contact/add', {
+        method: 'POST',
+        headers:{
+          'Contect-Type': 'application/json'
+        },
+        body:JSON.stringify({contactData})
       })
-      .catch((err) => {
+      const resData= await responseData.json();
+
+      
+        setErrors({})
+        alert(resData)
+      }
+      catch(err) {
         setErrors(err.response.data)
         alert(error.message)
-      })
+      }
   }
 
 

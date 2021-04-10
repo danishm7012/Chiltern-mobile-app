@@ -6,6 +6,7 @@ import Color from '../../colors/Color'
 import { createAppContainer } from "react-navigation";
 import {Platform } from "react-native"
 import ContactUs from '../../screens/contactUs/ContactUs'
+import Filter from '../../screens/filter/Filter'
 
 
 const BarberStackNavigation = createStackNavigator({
@@ -21,7 +22,9 @@ Barber_Services:
 BarberBook_Appointment:{
     screen :ContactUs,
   },
-
+  Filter_Screen:{
+         screen:Filter,
+  },
 },
 {
   mode:'modal',
