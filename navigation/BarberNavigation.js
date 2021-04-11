@@ -16,6 +16,11 @@ import {createBottomTabNavigator} from "react-navigation-tabs"
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 import Aboutss from '../screens/about/Aboutss'
 import DropDownPicker from 'react-native-dropdown-picker';
+import ExtraTry from '../components/ExtraTry'
+
+
+
+
 
 
 
@@ -168,164 +173,31 @@ const MainDrawerNavigator = createDrawerNavigator({
     //   />
     // ),
     contentComponent: (props) => { 
-      
-      const data = [
-        {
-          bg: '#6c398f',
-          color: '#ffffff',
-          category: 'Services',
-          subCategories: 'Visa Assistant',
-          // 'Tour Packeges',
-          // 'Hotel Reservation',
-          // 'City Sight',
-        },
-        {
-          bg: '#c11e8a',
-          color: '#ffffff',
-          category: 'Excursions',
-          subCategories: 'Attraction',
-          //'Theme Park','Adventures','Unseen Dubai','Shopping'],
-    
-        },
-      ];
-    
-    
-        const [currentIndex, setCurrentIndex] = React.useState(false);
-        const [isOpen, setIsOpen] = React.useState(false);
-        const [active , setActive] = React.useState({activeDrawerColor:''}); 
-      
       return (
       <ScrollView>
       <SafeAreaView style={{flex:1}}
       forceInset={{ top: '', horizontal: 'never' }}>
+        <View style={{flex:1,backgroundColor:'#fbc81b', borderBottomRightRadius:200}}>
           <View style={styles.drawerLogo}>
   
-            <Image style={{flex:1,width:'100%',resizeMode:'cover'}} source={require('../assets/chiltern-logo.png')} />
+            <Image style={{flex:1,width:'100%',resizeMode:'stretch'}} source={require('../assets/chiltern-logo.png')} />
           </View>
-          <View style={{flex:1}}>
-              <Text style={{color:'#fff'}} onPress={()=>{props.navigation.navigate({routeName:'FandQ'})}}>
-              Page1
-              </Text>
-              <View style={styles.container}>
-      {/* <StatusBar hidden /> */}
-      {/* {data.map(({ bg, color, category, subCategories }, index) => {
-        return ( */}
-          <TouchableOpacity
-            
-            onPress={() => {
-              
-              setCurrentIndex(currentIndex === false ? true  : false);
-              setActive({ activeDrawerColor: 0 })       
-
-              
-            }}
-            style={styles.cardContainer}
-            activeOpacity={0.9}
-          >
-            {/* { backgroundColor:Color.drawerColor} */}
-            <View style={[styles.card, { backgroundColor:Color.drawerColor} ]}>
-            <View style={{flex:1,flexDirection:'row', alignItems:'center',backgroundColor:'#10d300', justifyContent:'space-around'}}>
-              <Text style={[styles.heading, { color:'#fff' }]}>
-
-              Services
-                
-                </Text>
-              <Ionicons name = 'arrow-down-circle-sharp' size={18} color='white' style={{marginLeft:20}}/>
-
-                </View>
-
-              {currentIndex === true && (
-                <View style={styles.subCategoriesList}>
-                  {/* {subCategories.map( subCategory => (
-                    <Text key={subCategory} style={[styles.body, { color }]}>
-                      {subCategory}
-                    </Text>
-                  ))} */}
-      <Text style={[styles.body, { color:'#fff' }]} onPress={()=>{props.navigation.navigate({routeName:'FandQ'})}}>
-                      VissaAssistance
-                    </Text>
-      <Text style={[styles.body, { color:'#fff' }]} onPress={()=>{props.navigation.navigate({routeName:'TermCondition'})}}>
-                    Tour Packege
-                    </Text>  
-      <Text style={[styles.body, { color:'#fff' }]}  onPress={()=>{props.navigation.navigate({routeName:'About'})}}>
-                    Hotel Reservation
-          </Text>  
-      <Text style={[styles.body, { color:'#fff' }]} onPress={()=>{props.navigation.navigate({routeName:'BarberShops'})}}>
-                    City Sight View
-                    </Text>
-                  
-                </View>
-              )}
-            </View>
-          </TouchableOpacity>
-        {/* );
-      })} */}
-    </View>
-
-    <View style={styles.container}>
-      {/* <StatusBar hidden /> */}
-      {/* {data.map(({ bg, color, category, subCategories }, index) => {
-        return ( */}
-          <TouchableOpacity
-            
-            onPress={() => {
-              
-              setIsOpen(isOpen === false ? true  : false);
-
-            }}
-            style={styles.cardContainer}
-            activeOpacity={0.9}
-          >
-            <View style={[styles.card, { backgroundColor: Color.drawerColor }]}>
-              <View style={{flex:1,flexDirection:'row', alignItems:'center',backgroundColor:'#10d300', justifyContent:'space-around'}}>
-              <Text style={[styles.heading, { color:'#fff' }]}>
-
-              Excursions
-                
-                </Text>
-              <Ionicons name = 'arrow-down-circle-sharp' size={18} color='white' style={{marginLeft:20}}/>
-
-                </View>
-
-              {isOpen === true && (
-                <View style={styles.subCategoriesList}>
-                  {/* {subCategories.map( subCategory => (
-                    <Text key={subCategory} style={[styles.body, { color }]}>
-                      {subCategory}
-                    </Text>
-                  ))} */}
-                    <Text style={[styles.body, { color:'#fff' }]}>
-                    Awais
-                    </Text>
-                    <Text style={[styles.body, { color:'#fff' }]}>
-                    Awais
-                    </Text>  
-                    <Text style={[styles.body, { color:'#fff' }]}>
-                    Awais
-                    </Text>  
-                    <Text style={[styles.body, { color:'#fff' }]}>
-                    Awais
-                    </Text>
-                    <Text style={[styles.body, { color:'#fff' }]}>
-                      Awais
-                    </Text>
-                  
-                </View>
-              )}
-            </View>
-          </TouchableOpacity>
-        {/* );
-      })} */}
-    </View>
-            </View>
+          </View>
+          <View style={{}}>
+            <ExtraTry/>
+          </View>
+          {/* <DrawerItems {...props} />  */}
           {/* <DrawerItems {...props} /> */}
-        {/* <Text style={{color:'red'}}>Footer Area After</Text> */}
+          <DrawerItems {...props}/>
+          
+            {/* </DrawerItems> */}
+         <Text style={{color:'red'}}>Footer Area After</Text>
       </SafeAreaView>
       </ScrollView>
       
     )
 },
-    drawerWidth: Dimensions.get('window').width * 1,
+   // drawerWidth: Dimensions.get('window').width * 1,
     drawerBackgroundColor: Color.drawerColor,
     // width: Dimensions.get('window').width * 2,
     contentOptions:{
@@ -333,7 +205,7 @@ const MainDrawerNavigator = createDrawerNavigator({
       activeBackgroundColor : Color.accentColour,
       inactiveTintColor: '#808080',
       itemsContainerStyle: {
-        marginVertical: 30,
+        marginVertical: 5,
         
       },
       labelStyle:{
@@ -362,11 +234,11 @@ const MainDrawerNavigator = createDrawerNavigator({
       alignItems: 'center',
       marginTop:120, 
       justifyContent: 'center',
-      borderBottomWidth: 2,
-      borderBottomColor: '#C0C0C0',
-      borderBottomEndRadius:38,
-      borderBottomStartRadius:38,
-     
+      // borderBottomWidth: 2,
+      // borderBottomColor: '#C0C0C0',
+      // borderBottomEndRadius:38,
+      // borderBottomStartRadius:38,
+
     },
     container: {
       flex: 1,
