@@ -19,7 +19,7 @@ shadowOffset: {
 shadowOpacity: 0.58,
 shadowRadius: 16.00,
 
-elevation: 24,
+elevation: 15,
 
 },
 
@@ -142,5 +142,89 @@ mainContactForm:{
     
   },
   
+   //*********************************About Page Start****************************/
+
+   aboutMainClass:{
+    
+    flex:1,
+    
+  },
+  aboutimage:{
+    flex:1,
+    width:screenWidth,
+     height:screenHeight/3,
+    resizeMode:'stretch',
+    },
+abouttextStyle:{
+  flex:1,
+  padding:5,
+},
+aboutinnerTextStyle:{
+  color:'#c11e8a',
+  fontSize:20,
+ fontWeight:'bold',
+ 
+},
+aboutouterTextStyle:{
+fontSize:16,
+  padding:5,
+  color:'black',
+  letterSpacing:2,
+ fontFamily:'open-sans',
+},
+aboutListcontent:{
+  flex:1,
+  
+  
+},
+sectionHeader: {
+  paddingTop: 6,
+  paddingLeft: 10,
+  paddingRight: 10,
+  paddingBottom: 2,
+  fontSize: 22,
+  fontWeight: 'bold',
+  color:'#c11e8a',
+  backgroundColor: 'rgba(247,247,247,1.0)',
+},
+item: {
+  padding: 10,
+  fontSize: 14,
+  height: 44,
+},
+
+// **************************** About page Start *******************************
+aboutSwiper:{
+  resizeMode:'stretch',
+  height:screenHeight/3,
+  width:screenWidth,
+},
+Aboutdetail:{
+  
+  
+    color: '#808080',
+    fontWeight: '600',
+    textAlign: 'justify',
+    width: screenWidth * 0.93,
+    
+    
+    fontSize: 16,
+    lineHeight: 16 * 1.5,
+    //paddingBottom:30,
+  
+},
+Aboutheading: {
+  marginTop:15,
+  color: '#444',
+  textTransform: 'uppercase',
+  fontSize: 24,
+  
+  fontWeight: '800',
+  textAlign:'center',
+  letterSpacing: 2,
+  
+  fontFamily:'open-sans-bold',
+
+},
 
 });
