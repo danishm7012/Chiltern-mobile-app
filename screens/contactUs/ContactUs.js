@@ -34,7 +34,6 @@ const ContactUs = (props) => {
 
   const [errors, setErrors] = useState({})
 
-<<<<<<< HEAD
   const submitHandler = async () => {
     try {
       const response = await fetch(
@@ -57,31 +56,6 @@ const ContactUs = (props) => {
       setErrors(err)
       console.log(err)
     }
-=======
-  const submitHandler =  async(event) => {
-    try{event.preventDefault()
-
-    let contactData = { fname, lname, email, message }
-    
-    
-      const responseData= await fetch('http://chiltern.herokuapp.com/api/contact/add', {
-        method: 'POST',
-        headers:{
-          'Contect-Type': 'application/json'
-        },
-        body:JSON.stringify({contactData})
-      })
-      const resData= await responseData.json();
-
-      
-        setErrors({})
-        alert(resData)
-      }
-      catch(err) {
-        setErrors(err.response.data)
-        alert(error.message)
-      }
->>>>>>> 136fcb4604d138f45823f1a43649a0f0c5febbdd
   }
 
   return (
