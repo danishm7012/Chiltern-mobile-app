@@ -38,27 +38,28 @@ function Services({onSelect,title,logo,image}) {
 }
 
 
- const  ServicesFlatlist = () =>{
-    const renderItem = (itemData) =>{ 
+ const  ServicesFlatlist = (props) =>{
+   
+  const ListHeader = () => {
+    //View to set in Header
+    return (
+      <View style={{flex:1}}>
+        <Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444'}}>
+            Services
+        </Text>
+      </View>
+    );
+  };
+  
+   const renderItem = (itemData) =>{ 
         return(
            
           <Services
         title= {itemData.item.name}
         logo = {itemData.item.logo}
         image={itemData.item.image}
-          onSelect={()=>{
-         props.navigation.navigate({routeName: 'Barber_Services',
-        //  params:{
-        //         serviceId : itemData.item._id,
-        //         serviceTitle : itemData.item.name
-        //       }
-        })
-          }}
-        //   onSelectFilter={()=>{
-        //     props.navigation.navigate({routeName: 'Filter_Screen'})
-        //      }} 
-         
-          />
+        onSelect={props.onSelect}
+/>
           );
         };  
     return(
@@ -69,6 +70,7 @@ function Services({onSelect,title,logo,image}) {
        keyExtractor={item => item._id}
        renderItem={renderItem}
        numColumns={2}
+       ListHeaderComponent={ListHeader}
      />
      </View>
     )

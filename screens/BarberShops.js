@@ -15,14 +15,22 @@ const BarberShops = (props) =>{
     // title= {itemData.item.name}
     // logo = {itemData.item.logo}
     // image={itemData.item.image}
-    //   onSelect={()=>{
-    //  props.navigation.navigate({routeName: 'Barber_Services'})
+      onSelect={()=>{
+     props.navigation.navigate({routeName: 'Barber_Services'})
     // //  params:{
     //         serviceId : itemData.item._id,
     //         serviceTitle : itemData.item.name
     //       }
     
-      // }}
+      }}
+      onSelectExcursions={()=>{
+        props.navigation.navigate({routeName: 'Excursions_Detail'})
+       // //  params:{
+       //         serviceId : itemData.item._id,
+       //         serviceTitle : itemData.item.name
+       //       }
+       
+         }}
       onSelectFilter={()=>{
         props.navigation.navigate({routeName: 'Filter_Screen'})
          }} 

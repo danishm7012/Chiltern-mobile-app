@@ -16,7 +16,7 @@ import {createBottomTabNavigator} from "react-navigation-tabs"
 import {createMaterialBottomTabNavigator} from 'react-navigation-material-bottom-tabs'
 import Aboutss from '../screens/about/Aboutss'
 import DropDownPicker from 'react-native-dropdown-picker';
-import ExtraTry from '../components/ExtraTry'
+import SubDrawerMenu from '../components/SubDrawerMenu'
 
 
 
@@ -184,7 +184,7 @@ const MainDrawerNavigator = createDrawerNavigator({
           </View>
           </View>
           <View style={{}}>
-            <ExtraTry/>
+            <SubDrawerMenu/>
           </View>
           {/* <DrawerItems {...props} />  */}
           {/* <DrawerItems {...props} /> */}

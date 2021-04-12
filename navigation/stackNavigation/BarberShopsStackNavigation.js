@@ -7,6 +7,7 @@ import { createAppContainer } from "react-navigation";
 import {Platform } from "react-native"
 import ContactUs from '../../screens/contactUs/ContactUs'
 import Filter from '../../screens/filter/Filter'
+import ExcursionsDetail from "../../screens/excursions/ExcursionsDetail";
 
 
 const BarberStackNavigation = createStackNavigator({
@@ -24,6 +25,9 @@ BarberBook_Appointment:{
   },
   Filter_Screen:{
          screen:Filter,
+  },
+  Excursions_Detail:{
+      screen: ExcursionsDetail,
   },
 },
 {

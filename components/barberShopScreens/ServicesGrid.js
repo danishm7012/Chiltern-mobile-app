@@ -19,7 +19,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import ServicesFlatlist from '../services/Services'
 import Excursions from '../excursions/Excursions'
 
-const ServicesGrid = ({onSelectFilter}) => {
+const ServicesGrid = ({onSelectFilter,onSelect}) => {
 let TouchableCom = TouchableOpacity;
 
 if (Platform.OS==="android" && Platform.Version >= 21){
@@ -75,7 +75,9 @@ if (Platform.OS==="android" && Platform.Version >= 21){
 
                                              {/*  Services Start     */}
 <View>
-  <ServicesFlatlist/>
+  <ServicesFlatlist
+      onSelect={onSelect}
+      />
   
 </View>
 

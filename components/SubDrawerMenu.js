@@ -4,7 +4,7 @@ import Color from '../colors/Color'
 import { Ionicons } from '@expo/vector-icons';
 
 
-function ExtraTry(props) {
+function SubDrawerMenu(props) {
   const [currentIndex, setCurrentIndex] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
   const [active , setActive] = React.useState({activeDrawerColor:''}); 
@@ -34,7 +34,7 @@ return ( */}
   backgroundColor:Color.drawerColor, justifyContent:'center',marginHorizontal:18,marginVertical:15}}>
     <Ionicons name = 'paper-plane'size={25} color='white'/>
     
-    <Text style={[styles.heading, {textAlign: 'justify' ,color:'#808080' }]}>
+    <Text style={[styles.heading, {textAlign: 'justify' ,color:'#808080',fontFamily: 'open-sans-bold' }]}>
 
     Services
       
@@ -50,19 +50,19 @@ return ( */}
             {subCategory}
           </Text>
         ))} */}
-<Text style={[styles.body, { color:'#808080',textAlign: 'justify' }]} 
+<Text style={[styles.body, { color:'#808080',textAlign: 'justify',fontFamily: 'open-sans-bold' }]} 
 onPress={()=>{props.navigation.navigate({routeName:'FandQ'})}}>
             VissaAssistance
           </Text>
-<Text style={[styles.body, { color:'#808080',textAlign: 'justify' }]} 
+<Text style={[styles.body, { color:'#808080',textAlign: 'justify',fontFamily: 'open-sans-bold' }]} 
 onPress={()=>{props.navigation.navigate({routeName:'TermCondition'})}}>
           Tour Packege
           </Text>  
-<Text style={[styles.body, { color:'#808080',textAlign: 'justify' }]}  
+<Text style={[styles.body, { color:'#808080',textAlign: 'justify',fontFamily: 'open-sans-bold' }]}  
 onPress={()=>{props.navigation.navigate({routeName:'About'})}}>
           Hotel Reservation
 </Text>  
-<Text style={[styles.body, { color:'#808080',textAlign: 'justify' }]} 
+<Text style={[styles.body, { color:'#808080',textAlign: 'justify',fontFamily: 'open-sans-bold' }]} 
 onPress={()=>{props.navigation.navigate({routeName:'BarberShops'})}}>
           City Sight View
           </Text>
@@ -94,7 +94,7 @@ return ( */}
     backgroundColor:Color.drawerColor, justifyContent:'space-around',marginHorizontal:18}}>
     <Ionicons name = 'earth'size={25} color='white'/>
     
-    <Text style={[styles.heading, {textAlign: 'justify' ,color:'#808080' }]}>
+    <Text style={[styles.heading, {textAlign: 'justify' ,fontFamily: 'open-sans-bold', color:'#808080' }]}>
 
     Excursions
       
@@ -110,20 +110,20 @@ return ( */}
             {subCategory}
           </Text>
         ))} */}
-          <Text style={[styles.body, { color:'#808080' }]}>
-          Awais
+          <Text style={[styles.body, { color:'#808080',fontFamily: 'open-sans-bold' }]}>
+          Attraction
           </Text>
-          <Text style={[styles.body, { color:'#808080' }]}>
-          Awais
+          <Text style={[styles.body, { color:'#808080',fontFamily: 'open-sans-bold' }]}>
+          Theme Park
           </Text>  
-          <Text style={[styles.body, { color:'#808080' }]}>
-          Awais
+          <Text style={[styles.body, { color:'#808080',fontFamily: 'open-sans-bold' }]}>
+          Adventure
           </Text>  
-          <Text style={[styles.body, { color:'#808080' }]}>
-          Awais
+          <Text style={[styles.body, { color:'#808080',fontFamily: 'open-sans-bold' }]}>
+          Unseen Dubai
           </Text>
-          <Text style={[styles.body, { color:'#808080' }]}>
-            Awais
+          <Text style={[styles.body, { color:'#808080',fontFamily: 'open-sans-bold' }]}>
+            Shopping
           </Text>
         
       </View>
@@ -137,7 +137,7 @@ return ( */}
   )
 }
 
-export default ExtraTry
+export default SubDrawerMenu
 
 const styles = StyleSheet.create({
   icon: {
