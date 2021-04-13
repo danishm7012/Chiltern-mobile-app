@@ -13,8 +13,8 @@ function Services({onSelect,title,logo,image}) {
 <Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444' }}>Services</Text>
 
 </View> */}
-<View style={{marginTop:10, flexDirection:'row',alignItems:'center',justifyContent:'space-around'}}>
-<View style={{flex:0.3,alignItems:'center',justifyContent:'center'}}>
+<View style={{marginTop:3, flexDirection:'row',alignItems:'center',justifyContent:'space-around'}}>
+<View style={{flex:0.6,alignItems:'center',justifyContent:'center'}}>
 <Avatar
   size="large"
   rounded
@@ -28,7 +28,7 @@ function Services({onSelect,title,logo,image}) {
   // onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
-<Text style={{fontSize:12,marginTop:18, marginBottom:18, color:'#444'}}>{title}</Text>
+<Text style={{fontSize:12,marginTop:10, marginBottom:10, color:'#444'}}>{title}</Text>
 </View>
 </View>
 
@@ -37,42 +37,4 @@ function Services({onSelect,title,logo,image}) {
 )
 }
 
-
- const  ServicesFlatlist = (props) =>{
-   
-  const ListHeader = () => {
-    //View to set in Header
-    return (
-      <View style={{flex:1}}>
-        <Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444'}}>
-            Services
-        </Text>
-      </View>
-    );
-  };
-  
-   const renderItem = (itemData) =>{ 
-        return(
-           
-          <Services
-        title= {itemData.item.name}
-        logo = {itemData.item.logo}
-        image={itemData.item.image}
-        onSelect={props.onSelect}
-/>
-          );
-        };  
-    return(
-<View style={{width:'100%'}}>    
- 
- <FlatList
-       data={SERVICES}
-       keyExtractor={item => item._id}
-       renderItem={renderItem}
-       numColumns={2}
-       ListHeaderComponent={ListHeader}
-     />
-     </View>
-    )
-}
-export default ServicesFlatlist
+export default Services

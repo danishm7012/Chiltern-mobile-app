@@ -16,10 +16,12 @@ import AllStyle from '../../AllStyle'
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
 import { SafeAreaView } from 'react-native-safe-area-context'
  let {height, width} = Dimensions.get("window")
-import ServicesFlatlist from '../services/Services'
+import Services from '../services/Services'
 import Excursions from '../excursions/Excursions'
+import ChilternExcursionsMain from '../../screens/chilternmain/ChilternExcursionsMain'
+import ChilternMainServices from '../../screens/chilternmain/ChilternMainServices'
 
-const ServicesGrid = ({onSelectFilter,onSelect}) => {
+const ServicesGrid = ({onSelectFilter}) => {
 let TouchableCom = TouchableOpacity;
 
 if (Platform.OS==="android" && Platform.Version >= 21){
@@ -75,9 +77,7 @@ if (Platform.OS==="android" && Platform.Version >= 21){
 
                                              {/*  Services Start     */}
 <View>
-  <ServicesFlatlist
-      onSelect={onSelect}
-      />
+  <ChilternMainServices/>
   
 </View>
 
@@ -94,18 +94,16 @@ if (Platform.OS==="android" && Platform.Version >= 21){
 
 <PackegesCard/>
 </View>
+               {/* Excursions Start */}
 
-                              {/* Excursions Start */}
-
-            <View>
-               <Excursions
-               
-               />
+               <View style={{marginTop:10}}>
+               <ChilternExcursionsMain />
             </View>
 
 
                                 {/* Excursions End */}
 
+                     
 </View>
       
 </ScrollView>

@@ -1,10 +1,11 @@
-const excursions = [
+const Excursions = [
   {
     _id: 'Helicopter-Ride',
     name: 'Helicopter Ride',
     image: require('../assets/images/excursions/helicopter.jpg'),
     catagory: 'Attractions',
     cost: 'Cost Starting from USD 180 Per person *tc',
+    price:'AED580',
   },
   {
     _id: 'Hot-Air-Balloon',
@@ -12,12 +13,15 @@ const excursions = [
     image: require('../assets/images/excursions/hot-air-balloon.jpg'),
     catagory: 'Attractions',
     cost: 'Cost Starting from USD 267 Per person *tc',
+    price:'AED580',
+  
   },
   {
     _id: 'Full-Day-City-Tour-With-Miracle-Garden',
     name: 'Full Day City Tour With Miracle Garden',
     image: require('../assets/images/excursions/full-day-city-tour-with-miracle-garden.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 71 Per person *tc',
   },
   {
@@ -25,6 +29,7 @@ const excursions = [
     name: 'Polar Pass Snow',
     image: require('../assets/images/excursions/polar-pass-snow.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 74 Per person *tc',
   },
   {
@@ -32,6 +37,7 @@ const excursions = [
     name: 'Marina Dhow Cruise',
     image: require('../assets/images/excursions/marina-dhow-cruise-768x546.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 54 Per person *tc',
   },
   {
@@ -39,6 +45,7 @@ const excursions = [
     name: 'City Sightseeing / Hop On – Hop Off ',
     image: require('../assets/images/excursions/city-sightseeing-hop-on–hop-off-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 54 Per person *tc',
   },
   {
@@ -46,6 +53,7 @@ const excursions = [
     name: 'Desert Safari',
     image: require('../assets/images/excursions/desert-safari-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 49 Per person *tc',
   },
   {
@@ -53,6 +61,7 @@ const excursions = [
     name: 'Dibba Trip',
     image: require('../assets/images/excursions/dibba-trip-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 49 Per person *tc',
   },
   {
@@ -60,6 +69,7 @@ const excursions = [
     name: 'Abu Dhabi City Tour',
     image: require('../assets/images/excursions/abu-dhabi-city-tour-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 44 Per person *tc',
   },
   {
@@ -67,6 +77,7 @@ const excursions = [
     name: 'Creek Dhow Cruise',
     image: require('../assets/images/excursions/creek-dhow-cruise-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 33 Per person *tc',
   },
   {
@@ -74,6 +85,7 @@ const excursions = [
     name: 'Dubai City Tour',
     image: require('../assets/images/excursions/dubai-city-tour-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 26 Per person *tc',
   },
   {
@@ -81,6 +93,7 @@ const excursions = [
     name: 'Dubai Burj Khalifa Tour',
     image: require('../assets/images/excursions/dubai-burj-khalifa-tour-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 38 Per person *tc',
   },
   {
@@ -88,6 +101,7 @@ const excursions = [
     name: 'Louvre Abu Dhabi',
     image: require('../assets/images/excursions/louvre-abu-dhabi-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -95,6 +109,7 @@ const excursions = [
     name: 'Dolphin Show at Creek Park',
     image: require('../assets/images/excursions/dolphin-show-at-creek-park-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Cost Starting from USD 15 Per person *tc',
   },
   {
@@ -102,6 +117,7 @@ const excursions = [
     name: 'Dubai Safari Park',
     image: require('../assets/images/excursions/dubai-safari-park-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -109,6 +125,7 @@ const excursions = [
     name: 'Yas Marina Circuit Tour',
     image: require('../assets/images/excursions/'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -116,6 +133,7 @@ const excursions = [
     name: 'Afternoon Tea At Burj Al Arab – Sky View bar',
     image: require('../assets/images/excursions/skyview-bar-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -123,6 +141,7 @@ const excursions = [
     name: 'Dubai Frame',
     image: require('../assets/images/excursions/dubai-frame-600x433.jpg'),
     catagory: 'Attractions',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -130,6 +149,7 @@ const excursions = [
     name: 'Aqua Venture Water Park',
     image: require('../assets/images/excursions/aqua-venture-water-park-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 89 Per person *tc',
   },
   {
@@ -137,6 +157,7 @@ const excursions = [
     name: 'Ferrari World',
     image: require('../assets/images/excursions/ferrari-world-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 79 Per person *tc',
   },
   {
@@ -144,6 +165,7 @@ const excursions = [
     name: 'Motion Gate Dubai',
     image: require('../assets/images/excursions/motiongate-dubai-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 65 Per person *tc',
   },
   {
@@ -151,6 +173,7 @@ const excursions = [
     name: 'IMG Worlds of Adventure',
     image: require('../assets/images/excursions/img-worlds-of-adventure-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 64 Per person *tc',
   },
   {
@@ -158,6 +181,7 @@ const excursions = [
     name: 'Bollywood Park Dubai',
     image: require('../assets/images/excursions/bollywood-parks-dubai-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 50 Per person *tc',
   },
   {
@@ -165,6 +189,7 @@ const excursions = [
     name: 'Admission To Kidzania',
     image: require('../assets/images/excursions/admission-to-kidzania-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 35 Per person *tc',
   },
   {
@@ -172,6 +197,7 @@ const excursions = [
     name: 'ICe Land Water Park',
     image: require('../assets/images/excursions/ice-land-water-park-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 25 Per person *tc',
   },
   {
@@ -179,6 +205,7 @@ const excursions = [
     name: 'Dubai Aquarium & Under water Zoo',
     image: require('../assets/images/excursions/dubai-aquarium-under-water-zoo-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Cost Starting from USD 18 Per person *tc',
   },
   {
@@ -186,6 +213,7 @@ const excursions = [
     name: 'Legoland',
     image: require('../assets/images/excursions/legoland-600x433.jpg'),
     catagory: 'Theme Park',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -193,6 +221,7 @@ const excursions = [
     name: 'Jet Ski',
     image: require('../assets/images/excursions/jet-ski-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Cost Starting from USD 89 Per person *tc',
   },
   {
@@ -200,6 +229,7 @@ const excursions = [
     name: 'Quad Bike',
     image: require('../assets/images/excursions/quad-bike-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Cost Starting from USD 103 Per person *tc',
   },
   {
@@ -207,6 +237,7 @@ const excursions = [
     name: 'Seaplane',
     image: require('../assets/images/excursions/seaplane-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Cost Starting from USD 270 Per person *tc',
   },
   {
@@ -214,6 +245,7 @@ const excursions = [
     name: 'Dune Bashing',
     image: require('../assets/images/excursions/dune-bashing-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Cost Starting from USD 52 Per person *tc',
   },
   {
@@ -221,6 +253,7 @@ const excursions = [
     name: 'Fly Board',
     image: require('../assets/images/excursions/fly-board-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Cost Starting from USD 87 Per person *tc',
   },
   {
@@ -228,6 +261,7 @@ const excursions = [
     name: 'Scuba Diving',
     image: require('../assets/images/excursions/scuba-diving-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -235,6 +269,7 @@ const excursions = [
     name: 'Zip Lining',
     image: require('../assets/images/excursions/zip-lining-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -242,6 +277,7 @@ const excursions = [
     name: 'Sky Dive',
     image: require('../assets/images/excursions/sky-dive-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
   {
@@ -249,8 +285,9 @@ const excursions = [
     name: 'Ifly Sky Diving',
     image: require('../assets/images/excursions/skydiving-600x433.jpg'),
     catagory: 'Adventure',
+    price:'AED580',
     cost: 'Contact Us For Special Rates',
   },
-]
+];
 
-export default excursions
+export default Excursions

@@ -3,34 +3,36 @@ import ServicesGrid from '../components/barberShopScreens/ServicesGrid'
 import {View,FlatList, Text, Share } from 'react-native'
 import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../components/headerButton/HeaderButton'
-import SERVICES from '../data/Services'
+import SERVICES from '../data/Services' 
+import ChilternExcursionsMain from './chilternmain/ChilternExcursionsMain'
 
 
 const BarberShops = (props) =>{
 
-  //  const renderItem = (itemData) =>{ 
+ //   const renderItem = (itemData) =>{ 
     return(
-       
+      
       <ServicesGrid
     // title= {itemData.item.name}
     // logo = {itemData.item.logo}
     // image={itemData.item.image}
-      onSelect={()=>{
-     props.navigation.navigate({routeName: 'Barber_Services'})
-    // //  params:{
-    //         serviceId : itemData.item._id,
-    //         serviceTitle : itemData.item.name
-    //       }
+    //   onSelect={()=>{
+    //  props.navigation.navigate({routeName: 'Barber_Services'})
+      // params:{
+      //       serviceId : itemData.item._id,
+      //       serviceTitle : itemData.item.name
+      //     }
     
-      }}
-      onSelectExcursions={()=>{
-        props.navigation.navigate({routeName: 'Excursions_Detail'})
-       // //  params:{
-       //         serviceId : itemData.item._id,
-       //         serviceTitle : itemData.item.name
-       //       }
-       
-         }}
+      //}}
+      // onSelectExcursions={()=>{
+      //   props.navigation.navigate({routeName: 'Excursions_Detail',
+      //   //  params:{
+      //   //        serviceId : itemData.item._id,
+      //   //        serviceTitle : itemData.item.name
+      //   //      }
+      //       })
+      //    }}
+
       onSelectFilter={()=>{
         props.navigation.navigate({routeName: 'Filter_Screen'})
          }} 
@@ -48,31 +50,32 @@ const BarberShops = (props) =>{
       // });
       // }}
       />
+
       );
     };  
   
   
-  // return (
-    
-  // <View style={{width:'100%'}}>    
+//   return (
+//     <View style={{width:'100%'}}>    
  
-  // <FlatList
-  //       data={SERVICES}
-  //       keyExtractor={item => item._id}
-  //       renderItem={renderItem}
-  //       numColumns={2}
-  //     />
-  {/* <FlatList 
-  keyExtractor={(item)=> item.id}
-  data={ServicesData}
-  renderItem={renderGridItem} 
-  /> */}
-  {/* </View> */}
-// )
+//   <FlatList
+//         data={SERVICES}
+//         keyExtractor={item => item._id}
+//         renderItem={renderItem}
+//         numColumns={2}
+//       />
+//   {/* <FlatList 
+//   keyExtractor={(item)=> item.id}
+//   data={ServicesData}
+//   renderItem={renderGridItem} 
+//   /> */}
+//   </View>
+// );
 // }
 
 BarberShops.navigationOptions = navData => {
-  return{    
+
+return{    
   headerTitle:'Home',
   headerLeft: () => (
   <HeaderButtons HeaderButtonComponent = {HeaderButton}>
@@ -98,11 +101,11 @@ headerRight: () => (  <HeaderButtons HeaderButtonComponent={HeaderButton}>
  } />
   
 </HeaderButtons>
-)
+),
   }
 }
 
-export default BarberShops;
+export default BarberShops
 
 
 
