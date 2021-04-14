@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {StyleSheet,Image, View,Text,TouchableOpacity, SafeAreaView} from 'react-native'
+import {StyleSheet,Image,Button, View,Text,TouchableOpacity, SafeAreaView} from 'react-native'
 import { createAppContainer } from "react-navigation";
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer'
 import { Ionicons } from '@expo/vector-icons';
@@ -22,7 +22,18 @@ import SubDrawerMenu from '../components/SubDrawerMenu'
 
 
 
-
+// const RouteDrawerCongigure = {
+//   About:{
+//     screen:AboutStackNavigation,
+//     navigationOptions:{
+      
+//       drawerIcon: () => (
+//         <Ionicons name = 'information-circle-sharp'size={29} color='white'/>
+//       ),
+//       drawerLabel:'AboutUs',
+//     }
+//   },
+// }
 
 // const tabScreenConfig = {
 //   Home: {
@@ -79,7 +90,56 @@ import SubDrawerMenu from '../components/SubDrawerMenu'
 //     activeTintColor: Color.primaryColour
 //   },
 // });
-
+// const MainDrawerNavigation = createDrawerNavigator(RouteDrawerCongigure,
+//   {
+    // drawerIcon: ({ tintColor }) => (
+    //   <Image
+    //     source={require('../assets/images/logos/logo.png')}
+    //     style={[styles.icon, { tintColor: 'white' }]}
+    //   />
+    // ),
+//     contentComponent: (props) => {
+//       // var addd = {props} 
+//       return (
+//       <ScrollView>
+//       <SafeAreaView style={{flex:1}}
+//       forceInset={{ top: '', horizontal: 'never' }}>
+//         <View style={{flex:1,backgroundColor:'#fbc81b', borderBottomRightRadius:200}}>
+          
+//           <View style={styles.drawerLogo}>
+  
+//           <Button title="Go back" onPress={() => props.navigation.navigate(<MainDrawerNavigator/>)} />
+//           </View>
+          
+//           </View>
+//           <View style={{}}>
+//             <SubDrawerMenu/>
+//           </View>
+//           {/* <DrawerItems {...props} />  */}
+//           {/* <DrawerItems {...props} /> */}
+//           <DrawerItems {...props}/>
+          
+//             {/* </DrawerItems> */}
+//       </SafeAreaView>
+//       </ScrollView>
+      
+//     )
+// },
+//   })
+   
+  // BarberShops: {
+  //     screen: BarberShopsStackNavigation,
+  //     navigationOptions:{
+  //       drawerIcon: () => (
+  //         <Ionicons name = 'home' size={25} color='white'/>
+  //       ),
+        
+  //       drawerLabel:'Home',
+  //     }
+    
+  //   },
+    
+  // });
 
 
 
@@ -93,6 +153,7 @@ const MainDrawerNavigator = createDrawerNavigator({
         ),
         
         drawerLabel:'Home',
+        
       }
     
     },
@@ -165,23 +226,29 @@ const MainDrawerNavigator = createDrawerNavigator({
   },
   
   
-  },{
+  },
+  
+    
+  {
     // drawerIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../assets/images/logos/logo.png')}
     //     style={[styles.icon, { tintColor: 'white' }]}
     //   />
     // ),
-    contentComponent: (props) => { 
+    contentComponent: (props) => {
+      // var addd = {props} 
       return (
       <ScrollView>
       <SafeAreaView style={{flex:1}}
       forceInset={{ top: '', horizontal: 'never' }}>
         <View style={{flex:1,backgroundColor:'#fbc81b', borderBottomRightRadius:200}}>
+          
           <View style={styles.drawerLogo}>
   
-            <Image style={{flex:1,width:'100%',resizeMode:'stretch'}} source={require('../assets/chiltern-logo.png')} />
+            <Image style={{flex:0.6,width:'80%',resizeMode:'stretch'}} source={require('../assets/chiltern-logo.png')} />
           </View>
+          
           </View>
           <View style={{}}>
             <SubDrawerMenu/>
@@ -191,7 +258,6 @@ const MainDrawerNavigator = createDrawerNavigator({
           <DrawerItems {...props}/>
           
             {/* </DrawerItems> */}
-         <Text style={{color:'red'}}>Footer Area After</Text>
       </SafeAreaView>
       </ScrollView>
       
@@ -220,6 +286,7 @@ const MainDrawerNavigator = createDrawerNavigator({
       },
       
     }
+  
   });
   export default createAppContainer(MainDrawerNavigator);
   
@@ -231,9 +298,9 @@ const MainDrawerNavigator = createDrawerNavigator({
     drawerLogo:{
       flex:1,
       height: 100,
-      alignItems: 'center',
-      marginTop:120, 
-      justifyContent: 'center',
+      alignItems: 'flex-start',
+      marginTop:80, 
+      justifyContent: 'flex-start',
       // borderBottomWidth: 2,
       // borderBottomColor: '#C0C0C0',
       // borderBottomEndRadius:38,
