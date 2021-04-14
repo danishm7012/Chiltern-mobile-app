@@ -6,8 +6,8 @@ import * as Font from 'expo-font'
 import { enableScreens } from 'react-native-screens'
 import MainDrawerNavigator from './navigation/BarberNavigation'
 
-import { Provider } from 'react-redux'
-import store from './store'
+// import { Provider } from 'react-redux'
+// import store from './store'
 
 enableScreens()
 const fetchFonts = () => {
@@ -31,8 +31,8 @@ export default function App() {
     )
   }
   return (
-    <Provider store={store}>
+   // <Provider store={store}>
       <MainDrawerNavigator />
-    </Provider>
+    //</Provider>
   )
 }

@@ -6,7 +6,7 @@ import SERVICES from '../../data/Services'
 
  let {height, width} = Dimensions.get("window")
 
-function Services({onSelect,title,logo,image}) {
+function Services({onSelect,name,logo}) {
     return (
 <View style={{flex:1}}>
 {/* <View style={{marginTop:1 }}>
@@ -28,7 +28,7 @@ function Services({onSelect,title,logo,image}) {
   // onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
-<Text style={{fontSize:12,marginTop:10, marginBottom:10, color:'#444'}}>{title}</Text>
+<Text style={{fontSize:12,marginTop:10, marginBottom:10, color:'#444'}}>{name}</Text>
 </View>
 </View>
 

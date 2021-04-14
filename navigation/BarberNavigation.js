@@ -250,9 +250,9 @@ const MainDrawerNavigator = createDrawerNavigator({
           </View>
           
           </View>
-          <View style={{}}>
+          {/* <View style={{}}>
             <SubDrawerMenu/>
-          </View>
+          </View> */}
           {/* <DrawerItems {...props} />  */}
           {/* <DrawerItems {...props} /> */}
           <DrawerItems {...props}/>

@@ -6,7 +6,7 @@ import EXCURSIONSCATEGORY from '../../data/ExcursionsCategory'
  let {height, width} = Dimensions.get("window")
 
 
-const Excursions = ({onSelect,title,logo,image}) => {
+const Excursions = ({onSelect,name,logo}) => {
     return (
 <View style={{flex:1}}>
 {/* <View style={{marginTop:1 }}>
@@ -28,7 +28,7 @@ const Excursions = ({onSelect,title,logo,image}) => {
   // onPress={() => console.log("Works!")}
   activeOpacity={0.7}
 />
-<Text style={{flex:1,flexWrap:'wrap', flexBasis:30,fontSize:12,marginTop:10, marginBottom:10, color:'#444'}}>{title}</Text>
+<Text style={{flex:1,flexWrap:'wrap', flexBasis:30,fontSize:12,marginTop:10, marginBottom:10, color:'#444'}}>{name}</Text>
 </View>
 </View>
 

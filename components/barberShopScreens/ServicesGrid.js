@@ -21,7 +21,7 @@ import Excursions from '../excursions/Excursions'
 import ChilternExcursionsMain from '../../screens/chilternmain/ChilternExcursionsMain'
 import ChilternMainServices from '../../screens/chilternmain/ChilternMainServices'
 
-const ServicesGrid = ({onSelectFilter}) => {
+const ServicesGrid = ({ title,logo,onSelect}) => {
 let TouchableCom = TouchableOpacity;
 
 if (Platform.OS==="android" && Platform.Version >= 21){
@@ -69,7 +69,7 @@ if (Platform.OS==="android" && Platform.Version >= 21){
     />
   }
   type="outline"
-  onPress={onSelectFilter}
+ // onPress={onSelectFilter}
   containerStyle={{flex:1, borderColor:'#444'}}
   buttonStyle={{borderColor:'#444',borderWidth:0.5}}
 />
@@ -77,7 +77,11 @@ if (Platform.OS==="android" && Platform.Version >= 21){
 
                                              {/*  Services Start     */}
 <View>
-  <ChilternMainServices/>
+  <Services
+  name={title}
+  logo={logo}
+  onSelect={onSelect}
+  />
   
 </View>
 
@@ -97,7 +101,11 @@ if (Platform.OS==="android" && Platform.Version >= 21){
                {/* Excursions Start */}
 
                <View style={{marginTop:10}}>
-               <ChilternExcursionsMain />
+               <Excursions 
+                 name={title}
+                 logo={logo}
+                 onSelect={onSelect}
+               />
             </View>
 
 

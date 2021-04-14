@@ -1,32 +1,32 @@
-import { createStackNavigator } from "react-navigation-stack";
-import Color from '../../colors/Color'
-import { createAppContainer } from "react-navigation";
-import {Platform } from "react-native"
-import ChilternExcursionsMain from '../../screens/chilternmain/ChilternExcursionsMain'
-import ChilternMainServices from '../../screens/chilternmain/ChilternMainServices'
-import BarberShops from '../../screens/BarberShops'
-import ExcursionsDetail from "../../screens/excursions/ExcursionsDetail";
+// import { createStackNavigator } from "react-navigation-stack";
+// import Color from '../../colors/Color'
+// import { createAppContainer } from "react-navigation";
+// import {Platform } from "react-native"
+// import ChilternExcursionsMain from '../../screens/chilternmain/ChilternExcursionsMain'
+// import ChilternMainServices from '../../screens/chilternmain/ChilternMainServices'
+// import BarberShops from '../../screens/BarberShops'
+// import ExcursionsDetail from "../../screens/excursions/ExcursionsDetail";
 
 
-const ServicesExcursionsStackNavigation = createStackNavigator({
+// const ServicesExcursionsStackNavigation = createStackNavigator({
   
-    Barber_Shops: {
+//     Barber_Shops: {
     
-        screen: BarberShops,
+//         screen: BarberShops,
        
-  },
-   Chiltern_Main_Services:{
-      screen: ChilternMainServices,
-  },
+//   },
+//    Chiltern_Main_Services:{
+//       screen: ChilternMainServices,
+//   },
  
 
-},
-{
+// },
+// {
 
-  headerMode:"none",
+//   headerMode:"none",
        
- });
+//  });
 
-const ServicesExcursionsStackNavigator = createAppContainer(ServicesExcursionsStackNavigation)
+// const ServicesExcursionsStackNavigator = createAppContainer(ServicesExcursionsStackNavigation)
 
-export default ServicesExcursionsStackNavigator
+// export default ServicesExcursionsStackNavigator

@@ -73,9 +73,7 @@ BarberBook_Appointment:{
   Filter_Screen:{
          screen:Filter,
   },
-  Chiltern_Excursions_Main:{
-    screen:ChilternExcursionsMain,
-  },
+  
   Excursions_Detail:{
     screen: ExcursionsDetail,
 },
