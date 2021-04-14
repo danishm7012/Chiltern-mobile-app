@@ -36,8 +36,8 @@ if (Platform.OS==="android" && Platform.Version >= 21){
         backgroundColor:'hsla(0,100%,100%,1)' }} 
       >
       
-    
-    <View style={{flex:1 }}>
+      <View style={{flex:1 }}>
+    {/* <View style={{flex:1 }}>
       
  
       
@@ -73,7 +73,7 @@ if (Platform.OS==="android" && Platform.Version >= 21){
   containerStyle={{flex:1, borderColor:'#444'}}
   buttonStyle={{borderColor:'#444',borderWidth:0.5}}
 />
-      </View>
+      </View> */}
 
                                              {/*  Services Start     */}
 <View>
@@ -90,14 +90,14 @@ if (Platform.OS==="android" && Platform.Version >= 21){
 
 
 
-<View style={{marginTop:10}}>
+{/* <View style={{marginTop:10}}>
 <Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444'}}>Packeges</Text>
 
 </View>
 <View style={{flex:1}}>
 
 <PackegesCard/>
-</View>
+</View> */}
                {/* Excursions Start */}
 
                <View style={{marginTop:10}}>

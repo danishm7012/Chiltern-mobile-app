@@ -6,20 +6,85 @@ import HeaderButton from '../components/headerButton/HeaderButton'
 import SERVICES from '../data/Services' 
 import ChilternExcursionsMain from './chilternmain/ChilternExcursionsMain'
 import EXCURSIONSCATEGORY from '../data/ExcursionsCategory'
+import CustomCarousel from '../components/CarouselSlider'
+import SearchBars from '../components/searchComponent/SearchBar'
+import PackegesCard from '../components/packeges/PackegesCard'
+import { Card,Avatar, Icon, Button } from 'react-native-elements'
+import Services from '../components/services/Services'
+import Excursions from '../components/excursions/Excursions'
+//import AllStyle from '../../AllStyle'
 
-
-     const BarberShops = (props) =>{
+const BarberShops = (props) =>{
 
   //  const displayedSubCompanies = NationalCompanies.filter(
   //    company=> company.companyIds.indexOf(shId) >= 0 );
+const listHeader = () =>{
+  return (
+   <View style={{flex:1}}>
+   <View style={{ flex:0.8}}>
+    <CustomCarousel/>
 
+</View>
+<View style={{flex:1,flexDirection:'row',marginTop:5}} >
+    
+    <SearchBars/>
+    <Button
+  icon={
+    <Icon
+      name="search"
+      size={39}
+      color="#961a1d"
+    />
+  }
+  type="outline"
+  containerStyle={{flex:1, borderColor:'#444'}}
+  buttonStyle={{borderColor:'#444',borderWidth:0.5}}
+/>
+<Button
+  icon={
+    <Icon
+      name="filter-alt"
+      size={39}
+      color="#961a1d"
+    />
+  }
+  type="outline"
+ // onPress={onSelectFilter}
+  containerStyle={{flex:1, borderColor:'#444'}}
+  buttonStyle={{borderColor:'#444',borderWidth:0.5}}
+/>
+      </View>
+      <View style={{flex:1}}>
+              <Text style={{fontSize:18,flex:1, fontFamily:'open-sans-bold', color:'#444'}}>
+                  Services
+              </Text>
+            </View>
+      </View>
+  )
+}
+
+const listFooter = () => {
+  return(
+    <View style={{flex:1}}>
+      <View style={{marginTop:10}}>
+<Text style={{fontSize:18,fontFamily:'open-sans-bold', color:'#444'}}>Packeges</Text>
+
+</View>
+<View style={{flex:1}}>
+
+<PackegesCard/>
+</View>
+
+    </View>
+  )
+}
     const renderItem = (itemData) =>{ 
     
-          return(
+   if   (itemData.item.category === 'excursion') {  
+      return(
       
-      
-      <ServicesGrid
-    title= {itemData.item.name}
+      <Excursions
+    name= {itemData.item.name}
     logo = {itemData.item.logo}
     image={itemData.item.image}
       onSelect={()=>{
@@ -56,52 +121,54 @@ import EXCURSIONSCATEGORY from '../data/ExcursionsCategory'
       // });
       // }}
       />
-        
-      );
-   
-
-  // return(
-  //    <ServicesGrid
-  // title= {itemData.item.name}
-  // logo = {itemData.item.logo}
-  // image={itemData.item.image}
-  //   onSelect={()=>{
-  //  props.navigation.navigate({routeName: 'Excursions_Detail',
-  //   params:{
-  //         serviceId : itemData.item._id,
-  //         serviceTitle : itemData.item.name
-  //       }
-  //     })
-  //   }}
-
-  //   // onSelectExcursions={()=>{
-  //   //   props.navigation.navigate({routeName: 'Excursions_Detail',
-  //   //   //  params:{
-  //   //   //        serviceId : itemData.item._id,
-  //   //   //        serviceTitle : itemData.item.name
-  //   //   //      }
-  //   //       })
-  //   //    }}
-
-  //   // onSelectFilter={()=>{
-  //   //   props.navigation.navigate({routeName: 'Filter_Screen'})
-  //   //    }} 
-   
-   
-  //   // <ServicesGrid  
-  //   //  title = {itemData.item.name}
-
-  //   //    onSelect={()=>{
-  //   //    props.navigation.navigate({routeName: 'Barber_Services',
-  //   //    params:{
-  //   //      shopId : itemData.item.id,
-  //   //      shopTitle : itemData.item.title
-  //   //    }
-  //   // });
-  //   // }}
-  //   />
       
-  //   );
+      );
+    }
+   else { 
+
+  return(
+     <Services
+  name= {itemData.item.name}
+  logo = {itemData.item.logo}
+  image={itemData.item.image}
+    onSelect={()=>{
+   props.navigation.navigate({routeName: 'Excursions_Detail',
+    params:{
+          serviceId : itemData.item._id,
+          serviceTitle : itemData.item.name
+        }
+      })
+    }}
+
+    // onSelectExcursions={()=>{
+    //   props.navigation.navigate({routeName: 'Excursions_Detail',
+    //   //  params:{
+    //   //        serviceId : itemData.item._id,
+    //   //        serviceTitle : itemData.item.name
+    //   //      }
+    //       })
+    //    }}
+
+    // onSelectFilter={()=>{
+    //   props.navigation.navigate({routeName: 'Filter_Screen'})
+    //    }} 
+   
+   
+    // <ServicesGrid  
+    //  title = {itemData.item.name}
+
+    //    onSelect={()=>{
+    //    props.navigation.navigate({routeName: 'Barber_Services',
+    //    params:{
+    //      shopId : itemData.item.id,
+    //      shopTitle : itemData.item.title
+    //    }
+    // });
+    // }}
+    />
+      
+    );
+  };
 };  
     
   return (
@@ -110,8 +177,10 @@ import EXCURSIONSCATEGORY from '../data/ExcursionsCategory'
   <FlatList
         data={SERVICES.concat(EXCURSIONSCATEGORY)}
         keyExtractor={item => item._id}
+        ListFooterComponent={listFooter}
         renderItem={renderItem}
-        numColumns={1}
+        numColumns={3}
+        ListHeaderComponent={listHeader}
       />
   {/* <FlatList 
   keyExtractor={(item)=> item.id}
