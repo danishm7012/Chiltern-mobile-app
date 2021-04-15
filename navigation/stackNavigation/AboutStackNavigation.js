@@ -11,7 +11,7 @@ const AboutUsStackNavigation = createStackNavigator({
     navigationOptions:{
       headerTitleAlign:'center',
     headerStyle:{
-  backgroundColor: Platform.OS==='android' ? Color.primaryColour  : Color.accentColour
+  backgroundColor: Platform.OS==='android' ? Color.accentColour  : Color.primaryColour
       },
       headerTitleStyle: {
         fontFamily: "open-sans-bold",

@@ -7,7 +7,7 @@ import {Platform,Dimensions } from "react-native"
 import Color from '../colors/Color'
 import BarberShopsStackNavigation from './stackNavigation/BarberShopsStackNavigation'
 import AboutStackNavigation from './stackNavigation/AboutStackNavigation'
-import PartnersStackNavigation from './stackNavigation/PartnersStackNavigation';
+import ExcursionsDetailStackNavigation from './stackNavigation/PartnersStackNavigation';
 import ContactUsStackNavigation from './stackNavigation/ContactUsStackNavigation';
 import TermandConditionStackNavigation from './stackNavigation/TermandConditionStackNavigation';
 import FAQStackNavigation from './stackNavigation/FAQStackNavigation';
@@ -180,16 +180,16 @@ const MainDrawerNavigator = createDrawerNavigator({
     },
   
   
-    Our_Partners:{ 
-      screen:PartnersStackNavigation,
+    // Excursions_Detail:{ 
+    //   screen:ExcursionsDetailStackNavigation,
       
-      navigationOptions: {
-        drawerIcon: () => (
-          <Ionicons name = 'people-sharp'size={25} color='white'/>
-        ),
-       drawerLabel:'Our_Partners' 
-      }
-    },
+    //   navigationOptions: {
+    //     drawerIcon: () => (
+    //       <Ionicons name = 'people-sharp'size={25} color='white'/>
+    //     ),
+    //    drawerLabel:'Excursions' 
+    //   }
+    // },
   
   
   ContactUs:{
@@ -271,7 +271,7 @@ const MainDrawerNavigator = createDrawerNavigator({
       activeBackgroundColor : Color.accentColour,
       inactiveTintColor: '#808080',
       itemsContainerStyle: {
-        marginVertical: 5,
+        marginVertical: 55,
         
       },
       labelStyle:{
@@ -299,7 +299,7 @@ const MainDrawerNavigator = createDrawerNavigator({
       flex:1,
       height: 100,
       alignItems: 'flex-start',
-      marginTop:80, 
+      marginTop:120, 
       justifyContent: 'flex-start',
       // borderBottomWidth: 2,
       // borderBottomColor: '#C0C0C0',

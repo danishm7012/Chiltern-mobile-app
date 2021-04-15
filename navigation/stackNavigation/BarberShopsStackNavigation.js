@@ -16,6 +16,7 @@ import {HeaderButtons, Item} from 'react-navigation-header-buttons'
 import HeaderButton from '../../components/headerButton/HeaderButton'
 import Login from '../../screens/loginSignup/Login';
 import SignUp from '../../screens/loginSignup/SignUp';
+import BarberServicesGrid from '../../components/barberShopScreens/BarberServicesGrid'
 
 const BarberStackNavigation = createStackNavigator({
   
@@ -63,22 +64,25 @@ const BarberStackNavigation = createStackNavigator({
     //   }
       
 //},
-Barber_Services:
-  {
-    screen: BarberServices,
-},
-BarberBook_Appointment:{
-    screen :ContactUs,
-  },
+// Barber_Services:
+//   {
+//     screen: BarberServices,
+// },
+// BarberBook_Appointment:{
+//     screen :ContactUs,
+//   },
   Filter_Screen:{
          screen:Filter,
   },
   
+  Services_Detail:{
+    screen:BarberServices
+    },
+
   Excursions_Detail:{
     screen: ExcursionsDetail,
 },
-  
-  Login_Screen:{
+ Login_Screen:{
     screen:Login,
   },
   Sign_Up:{

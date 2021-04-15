@@ -7,6 +7,9 @@ import SearchBars from '../../components/searchComponent/SearchBar'
 let {width:screenWidth, height:screenHeight} = Dimensions.get('window')
 
 function BarberServicesGrid({onSelect}) {
+
+  const compDetailId = props.navigation.getParam('servicesId');
+  const selectedCompany = SERVICES.find(company => company.id === compDetailId);
     return (
 <View style={{flex:1}}>
   
@@ -22,13 +25,12 @@ function BarberServicesGrid({onSelect}) {
     
     <View >
       <Text style={AllStyle.Aboutdetail}>
-        We select each sector which strives to be beneficial and valuable to the country and general public, resulting in year on year revenue and fair wages for our clients. LB Globe is a massive platform of various companies & industries. It was established in, 2010 and its head office is located in Gulberg-Lahore, Punjab, Pakistan. 
-
+      {selectedCompany.detail}
 </Text>
     </View>
     <View >
     <Button
-      onPress={onSelect}
+      // onPress={onSelect}
       title="Inquiry Now"
   raised={true}
   type="outline"

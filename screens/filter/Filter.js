@@ -111,17 +111,17 @@ Filter.navigationOptions = navData => {
   return{
 
   headerTitle:'Filter',
-  headerLeft: () => (
-  <HeaderButtons HeaderButtonComponent = {HeaderButton}>
-    <Item 
-    title='Menu' 
-    iconName='ios-menu' 
-    onPress={() => {
-      navData.navigation.toggleDrawer();
-    }} /> 
+//   headerLeft: () => (
+//   <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+//     <Item 
+//     title='Menu' 
+//     iconName='ios-menu' 
+//     onPress={() => {
+//       navData.navigation.toggleDrawer();
+//     }} /> 
 
-  </HeaderButtons>
-)
+//   </HeaderButtons>
+// )
   }
 }
 const styles = StyleSheet.create({

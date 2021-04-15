@@ -6,20 +6,9 @@ Dimensions,
 Image,
 ScrollView,
 } from 'react-native'
-import PackegesCard from '../packeges/PackegesCard'
-import CustomCarousel from '../CarouselSlider'
-import CardsSlider from '../../screens/about/CardsSlider'
-//import { Avatar } from "react-native-elements";
-import SearchBars from '../../components/searchComponent/SearchBar'
- import { Card,Avatar, Icon, Button } from 'react-native-elements'
-import AllStyle from '../../AllStyle'
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view'
-import { SafeAreaView } from 'react-native-safe-area-context'
  let {height, width} = Dimensions.get("window")
 import Services from '../services/Services'
 import Excursions from '../excursions/Excursions'
-import ChilternExcursionsMain from '../../screens/chilternmain/ChilternExcursionsMain'
-import ChilternMainServices from '../../screens/chilternmain/ChilternMainServices'
 
 const ServicesGrid = ({ title,logo,onSelect}) => {
 let TouchableCom = TouchableOpacity;

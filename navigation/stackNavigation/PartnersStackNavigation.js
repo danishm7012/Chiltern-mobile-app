@@ -1,14 +1,14 @@
-import Partners from '../../screens/partners/Partners'
 import Color from '../../colors/Color'
 import { createStackNavigator } from "react-navigation-stack";
 import { createAppContainer } from "react-navigation";
 import {Platform } from "react-native"
+import ExcursionsDetail from '../../screens/excursions/ExcursionsDetail';
 
 
 
-const PartnersStackNavigator = createStackNavigator({
-    Our_Partners:{
-    screen:Partners,
+const ExcursionsDetailStackNavigator = createStackNavigator({
+  Excursions_Detail:{
+    screen: ExcursionsDetail,
     navigationOptions:{
       headerTitleAlign:'center',
     headerStyle:{
@@ -25,5 +25,5 @@ const PartnersStackNavigator = createStackNavigator({
 
   
 });
-const PartnersStackNavigation = createAppContainer(PartnersStackNavigator);
-export default PartnersStackNavigation
+const ExcursionsDetailStackNavigation = createAppContainer(ExcursionsDetailStackNavigator);
+export default ExcursionsDetailStackNavigation

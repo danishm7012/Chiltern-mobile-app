@@ -12,6 +12,7 @@ import PackegesCard from '../components/packeges/PackegesCard'
 import { Card,Avatar, Icon, Button } from 'react-native-elements'
 import Services from '../components/services/Services'
 import Excursions from '../components/excursions/Excursions'
+import ServicesMap from '../components/services/ServicesMap'
 //import AllStyle from '../../AllStyle'
 
 const BarberShops = (props) =>{
@@ -46,6 +47,9 @@ const listHeader = () =>{
       name="filter-alt"
       size={39}
       color="#961a1d"
+      onPress={()=>{
+           props.navigation.navigate({routeName: 'Filter_Screen'})
+            }} 
     />
   }
   type="outline"
@@ -56,7 +60,7 @@ const listHeader = () =>{
       </View>
       <View style={{flex:1}}>
               <Text style={{fontSize:18,flex:1, fontFamily:'open-sans-bold', color:'#444'}}>
-                  Services
+                  Excursions
               </Text>
             </View>
       </View>
@@ -64,6 +68,9 @@ const listHeader = () =>{
 }
 
 const listFooter = () => {
+  const compDetailId = props.navigation.getParam('servicesId');
+  const compTitle = props.navigation.getParam('servicesTitle');
+
   return(
     <View style={{flex:1}}>
       <View style={{marginTop:10}}>
@@ -74,68 +81,113 @@ const listFooter = () => {
 
 <PackegesCard/>
 </View>
+<View style={{}}>
+<View style={{flex:1}}>
+              <Text style={{fontSize:18,flex:1, fontFamily:'open-sans-bold', color:'#444'}}>
+                  Services
+              </Text>
+            </View>
+  <ServicesMap
+  onSelectVise={()=>{
+    props.navigation.navigate({routeName: 'Services_Detail',
+     params:{
+           servicesId : '1',
+           servicesTitle : 'Visa Assistance',
+         }
+       })
+     }}
 
+     onSelectCity={()=>{
+      props.navigation.navigate({routeName: 'Services_Detail',
+       params:{
+             servicesId : '2',
+             servicesTitle : 'City Sighteseeing',
+           }
+         })
+       }}
+
+       onSelectHotel={()=>{
+        props.navigation.navigate({routeName: 'Services_Detail',
+         params:{
+               servicesId : '3',
+               servicesTitle : 'Hotel Reservation',
+             }
+           })
+         }}
+
+         onSelectTour={()=>{
+          props.navigation.navigate({routeName: 'Services_Detail',
+           params:{
+                 servicesId : '4',
+                 servicesTitle : 'Tour Packeges',
+               }
+             })
+           }}
+  
+  />
+</View>
     </View>
   )
 }
     const renderItem = (itemData) =>{ 
     
-   if   (itemData.item.category === 'excursion') {  
-      return(
+  //  if   (itemData.item.category === 'services') {  
+  //     return(
       
-      <Excursions
-    name= {itemData.item.name}
-    logo = {itemData.item.logo}
-    image={itemData.item.image}
-      onSelect={()=>{
-     props.navigation.navigate({routeName: 'Barber_Services',
-      params:{
-            serviceId : itemData.item._id,
-            serviceTitle : itemData.item.name
-          }
-        })
-      }}
-      // onSelectExcursions={()=>{
-      //   props.navigation.navigate({routeName: 'Excursions_Detail',
-      //   //  params:{
-      //   //        serviceId : itemData.item._id,
-      //   //        serviceTitle : itemData.item.name
-      //   //      }
-      //       })
-      //    }}
+  //     <Services
+  //   name= {itemData.item.name}
+  //   logo = {itemData.item.logo}
+  //   image={itemData.item.image}
+  //     onSelect={()=>{
+  //    props.navigation.navigate({routeName: 'Services_Detail',
+  //     params:{
+  //           servicesId : itemData.item._id,
+  //           servicesTitle : itemData.item.name
+  //         }
+  //       })
+  //     }}
+  //     // onSelectExcursions={()=>{
+  //     //   props.navigation.navigate({routeName: 'Excursions_Detail',
+  //     //   //  params:{
+  //     //   //        serviceId : itemData.item._id,
+  //     //   //        serviceTitle : itemData.item.name
+  //     //   //      }
+  //     //       })
+  //     //    }}
 
-      // onSelectFilter={()=>{
-      //   props.navigation.navigate({routeName: 'Filter_Screen'})
-      //    }} 
+  //     // onSelectFilter={()=>{
+  //     //   props.navigation.navigate({routeName: 'Filter_Screen'})
+  //     //    }} 
      
      
-      // <ServicesGrid  
-      //  title = {itemData.item.name}
+  //     // <ServicesGrid  
+  //     //  title = {itemData.item.name}
 
-      //    onSelect={()=>{
-      //    props.navigation.navigate({routeName: 'Barber_Services',
-      //    params:{
-      //      shopId : itemData.item.id,
-      //      shopTitle : itemData.item.title
-      //    }
-      // });
-      // }}
-      />
+  //     //    onSelect={()=>{
+  //     //    props.navigation.navigate({routeName: 'Barber_Services',
+  //     //    params:{
+  //     //      shopId : itemData.item.id,
+  //     //      shopTitle : itemData.item.title
+  //     //    }
+  //     // });
+  //     // }}
+  //     />
       
-      );
-    }
-   else { 
+  //     );
+    
+   
 
   return(
-     <Services
+     <View style={{flex:1}}>
+     <Excursions
   name= {itemData.item.name}
   logo = {itemData.item.logo}
   image={itemData.item.image}
     onSelect={()=>{
    props.navigation.navigate({routeName: 'Excursions_Detail',
     params:{
-          serviceId : itemData.item._id,
-          serviceTitle : itemData.item.name
+          excursionId : itemData.item._id,
+          excursionTitle : itemData.item.name,
         }
       })
     }}
@@ -166,16 +218,16 @@ const listFooter = () => {
     // });
     // }}
     />
-      
+      </View>
     );
-  };
+  
 };  
     
   return (
-    <View style={{width:'100%'}}>    
+    <View style={{width:'100%',  backgroundColor:'hsla(0,100%,100%,1)'}}>    
  
   <FlatList
-        data={SERVICES.concat(EXCURSIONSCATEGORY)}
+        data={EXCURSIONSCATEGORY}
         keyExtractor={item => item._id}
         ListFooterComponent={listFooter}
         renderItem={renderItem}
@@ -192,37 +244,36 @@ const listFooter = () => {
 }
 
 BarberShops.navigationOptions = navData => {
-
-return{    
-  headerTitle:'Home',
-  headerLeft: () => (
-  <HeaderButtons HeaderButtonComponent = {HeaderButton}>
-    <Item 
-    title='Menu' 
-    iconName='ios-menu' 
-    onPress={() => {
-      navData.navigation.toggleDrawer();
-    }} /> 
-
-  </HeaderButtons>
-),
-headerRight: () => (  <HeaderButtons HeaderButtonComponent={HeaderButton}>
-  <Item  iconName="share-social-sharp"
- onPress={
-  () => {
-    Share.share({
-      title: 'Paradisegoc App',
-      message:  'https://reactnative.dev/docs/share'  + '\nHy! Happy to see you!'
-    }).then((res) => console.log(res))
-      .catch((error) => console.log(error))
-  }
- } />
-  
-</HeaderButtons>
-),
-  }
-}
-
+          return{    
+        headerTitle:'Home',
+        headerLeft: () => (
+        <HeaderButtons HeaderButtonComponent = {HeaderButton}>
+          <Item 
+          title='Menu' 
+          iconName='ios-menu' 
+          onPress={() => {
+            navData.navigation.toggleDrawer();
+          }} /> 
+      
+        </HeaderButtons>
+      ),
+      headerRight: () => (  <HeaderButtons HeaderButtonComponent={HeaderButton}>
+        <Item  iconName="person-add"
+       onPress={
+        () => {
+          navData.navigation.navigate('Login_Screen')
+          // Share.share({
+          //   title: 'Paradisegoc App',
+          //   message:  'https://reactnative.dev/docs/share'  + '\nHy! Happy to see you!'
+          // }).then((res) => console.log(res))
+          //   .catch((error) => console.log(error))
+        }
+       } />
+        
+      </HeaderButtons>
+      ),
+        }
+      }
 export default BarberShops
 
 

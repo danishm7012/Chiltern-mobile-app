@@ -78,8 +78,8 @@ const styles = StyleSheet.create({
     
       inputView: {
         backgroundColor: "#fff",
-        borderRadius: 30,
-        width: "70%",
+      //  borderRadius: 30,
+        width: "80%",
         height: 45,
         marginBottom: 20,
         alignItems: "center",
@@ -92,7 +92,7 @@ const styles = StyleSheet.create({
         marginLeft: 20,
       },
 loginBtn:{
-   width:"80%",
+   width:"60%",
    borderRadius:25,
    height:50,
    
